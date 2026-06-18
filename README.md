@@ -85,6 +85,7 @@ flowchart TB
 ## Product Ideology and Business Logic
 
 - Deep dive: `docs/IDEOLOGY_AND_BUSINESS_LOGIC.md`
+- Includes Mermaid decision-flow diagrams for quest refresh, generator logic, chronicle season gating, notifications, and tutorial visibility.
 - Covers decision-making flows for quest generation, assignment/expiry, streaks, chronicle season gating, notifications, verification, and onboarding tutorials.
 
 ## Layers (Summary)

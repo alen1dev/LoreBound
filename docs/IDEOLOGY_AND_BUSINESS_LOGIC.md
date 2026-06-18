@@ -49,6 +49,99 @@ Rule of thumb:
 
 ## 4) Decision Engines (How Logic Decides)
 
+## 4.0 Decision Flow Diagrams
+
+### A) Quest Refresh / Assignment Flow
+
+```mermaid
+flowchart TD
+    A[App Open or Pull-to-Refresh] --> B[Resolve today from TimeProvider]
+    B --> C[Clear expired ActiveQuest by expiresDate]
+    C --> D{Daily exists for today?}
+    D -- No --> D1[Generate DAILY quest and assign]
+    D -- Yes --> E{Side Quest exists?}
+    D1 --> E
+    E -- No --> E1[Generate SIDE_QUEST and assign +7d]
+    E -- Yes --> F{Adventure exists?}
+    E1 --> F
+    F -- No --> F1[Generate ADVENTURE and assign +30d]
+    F -- Yes --> G{Epic exists?}
+    F1 --> G
+    G -- No --> G1[Generate EPIC and assign +90d]
+    G -- Yes --> H[Load/observe state]
+    G1 --> H
+    H --> I[UI shows quests + refresh feedback]
+```
+
+### B) Quest Selection (Generator) Flow
+
+```mermaid
+flowchart TD
+    A[Generate quests for QuestType] --> B[Compute 2 weakest Character traits]
+    B --> C[Load quest pool by type]
+    C --> D{Type is DAILY?}
+    D -- Yes --> D1[Apply DAILY difficulty guardrails]
+    D -- No --> E[Split into pools]
+    D1 --> E
+    E --> F[Priority pool: matches weak traits]
+    E --> G[General pool: rest]
+    F --> H[Shuffle]
+    G --> H
+    H --> I[Merge priority-first + dedupe]
+    I --> J[Take required count]
+    J --> K[Return selected quests]
+```
+
+### C) Chronicle Seasonal Gate Flow
+
+```mermaid
+flowchart TD
+    A[Check current date] --> B{Jan16-Nov30?}
+    B -- Yes --> B1[State=Hidden]
+    B -- No --> C{Dec1-Dec14?}
+    C -- Yes --> C1[State=Preparing]
+    C -- No --> D{Dec15-Jan15?}
+    D -- Yes --> D1[State=Ready]
+    D -- No --> B1
+
+    C1 --> E{Chronicle JSON exists for year?}
+    D1 --> E
+    E -- No --> F[Auto-generate Chronicle via AI pipeline]
+    E -- Yes --> G[Expose Chronicle entry point]
+    F --> G
+```
+
+### D) Notification Scheduling Flow
+
+```mermaid
+flowchart TD
+    A[Notifications toggle ON] --> B[Schedule weekly periodic work]
+    B --> C[Compute delay to next Friday 6 PM]
+    C --> D[Enqueue unique periodic worker]
+    A --> E[Schedule one-time Chronicle reminder]
+    E --> F[Compute delay to Dec 15 10 AM]
+    F --> G{Delay > 0?}
+    G -- Yes --> H[Enqueue unique one-time worker]
+    G -- No --> I[Skip this year]
+
+    J[Notifications toggle OFF] --> K[Cancel weekly + chronicle workers]
+```
+
+### E) Tutorial Visibility Flow
+
+```mermaid
+flowchart TD
+    A[Open Home] --> B{quest_tutorial_seen?}
+    B -- No --> C[Show Quest tutorial dialog]
+    C --> D[Mark quest_tutorial_seen=true on dismiss]
+    B -- Yes --> E[Do not show]
+
+    F[Open Lore Journal] --> G{lore_tutorial_seen?}
+    G -- No --> H[Show Lore tutorial dialog]
+    H --> I[Mark lore_tutorial_seen=true on dismiss]
+    G -- Yes --> J[Do not show]
+```
+
 ## 4.1 Quest Selection Logic
 
 Location: `domain/service/LocalQuestGenerator.kt`
