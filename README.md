@@ -82,6 +82,11 @@ flowchart TB
     N --- O
 ```
 
+## Product Ideology and Business Logic
+
+- Deep dive: `docs/IDEOLOGY_AND_BUSINESS_LOGIC.md`
+- Covers decision-making flows for quest generation, assignment/expiry, streaks, chronicle season gating, notifications, verification, and onboarding tutorials.
+
 ## Layers (Summary)
 
 - **UI Layer**: Compose screens + ViewModels for presentation and interaction.
@@ -104,4 +109,3 @@ cd C:\Users\z004wujn\AndroidStudioProjects\LoreBound
 APK output:
 
 - `app/build/outputs/apk/debug/LoreBound.apk`
-
