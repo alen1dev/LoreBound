@@ -1,0 +1,198 @@
+[
+  {
+    "id": "first_steps",
+    "name": "First Steps",
+    "description": "Conquer your very first quest.",
+    "category": "ADVENTURE",
+    "requiredQuestCount": 1
+  },
+  {
+    "id": "rising_adventurer",
+    "name": "Rising Adventurer",
+    "description": "Conquer 5 quests of any kind.",
+    "category": "ADVENTURE",
+    "requiredQuestCount": 5
+  },
+  {
+    "id": "seasoned_adventurer",
+    "name": "Seasoned Adventurer",
+    "description": "Conquer 25 quests. The world is taking notice.",
+    "category": "ADVENTURE",
+    "requiredQuestCount": 25
+  },
+  {
+    "id": "veteran_wanderer",
+    "name": "Veteran Wanderer",
+    "description": "Conquer 50 quests. Your legend grows.",
+    "category": "ADVENTURE",
+    "requiredQuestCount": 50
+  },
+  {
+    "id": "legendary_hero",
+    "name": "Legendary Hero",
+    "description": "Conquer 100 quests. Songs are sung in your name.",
+    "category": "ADVENTURE",
+    "requiredQuestCount": 100
+  },
+  {
+    "id": "explorer_1",
+    "name": "Explorer I",
+    "description": "Conquer 3 exploration quests.",
+    "category": "EXPLORATION",
+    "requiredQuestCount": 3,
+    "requiredCategory": "EXPLORATION"
+  },
+  {
+    "id": "explorer_2",
+    "name": "Explorer II",
+    "description": "Conquer 10 exploration quests.",
+    "category": "EXPLORATION",
+    "requiredQuestCount": 10,
+    "requiredCategory": "EXPLORATION"
+  },
+  {
+    "id": "explorer_3",
+    "name": "Explorer III",
+    "description": "Conquer 25 exploration quests.",
+    "category": "EXPLORATION",
+    "requiredQuestCount": 25,
+    "requiredCategory": "EXPLORATION"
+  },
+  {
+    "id": "urban_wanderer",
+    "name": "Urban Wanderer",
+    "description": "Conquer 15 exploration quests. Every street tells a story.",
+    "category": "EXPLORATION",
+    "requiredQuestCount": 15,
+    "requiredCategory": "EXPLORATION"
+  },
+  {
+    "id": "curious_mind",
+    "name": "Curious Mind",
+    "description": "Conquer 3 learning quests.",
+    "category": "LEARNING",
+    "requiredQuestCount": 3,
+    "requiredCategory": "LEARNING"
+  },
+  {
+    "id": "museum_scholar",
+    "name": "Museum Scholar",
+    "description": "Conquer 5 learning quests.",
+    "category": "LEARNING",
+    "requiredQuestCount": 5,
+    "requiredCategory": "LEARNING"
+  },
+  {
+    "id": "book_hunter",
+    "name": "Book Hunter",
+    "description": "Conquer 10 learning quests.",
+    "category": "LEARNING",
+    "requiredQuestCount": 10,
+    "requiredCategory": "LEARNING"
+  },
+  {
+    "id": "conversation_initiate",
+    "name": "Conversation Initiate",
+    "description": "Conquer 3 social quests.",
+    "category": "SOCIAL",
+    "requiredQuestCount": 3,
+    "requiredCategory": "SOCIAL"
+  },
+  {
+    "id": "conversation_adept",
+    "name": "Conversation Adept",
+    "description": "Conquer 10 social quests.",
+    "category": "SOCIAL",
+    "requiredQuestCount": 10,
+    "requiredCategory": "SOCIAL"
+  },
+  {
+    "id": "creative_spark",
+    "name": "Creative Spark",
+    "description": "Conquer 3 creativity quests.",
+    "category": "CREATIVITY",
+    "requiredQuestCount": 3,
+    "requiredCategory": "CREATIVITY"
+  },
+  {
+    "id": "artisan",
+    "name": "Artisan",
+    "description": "Conquer 10 creativity quests.",
+    "category": "CREATIVITY",
+    "requiredQuestCount": 10,
+    "requiredCategory": "CREATIVITY"
+  },
+  {
+    "id": "iron_will",
+    "name": "Iron Will",
+    "description": "Conquer 5 fitness quests.",
+    "category": "FITNESS",
+    "requiredQuestCount": 5,
+    "requiredCategory": "FITNESS"
+  },
+  {
+    "id": "unstoppable_force",
+    "name": "Unstoppable Force",
+    "description": "Conquer 15 fitness quests.",
+    "category": "FITNESS",
+    "requiredQuestCount": 15,
+    "requiredCategory": "FITNESS"
+  },
+  {
+    "id": "brave_soul",
+    "name": "Brave Soul",
+    "description": "Conquer 3 courage quests. You're stepping beyond.",
+    "category": "COURAGE",
+    "requiredQuestCount": 3,
+    "requiredCategory": "COURAGE"
+  },
+  {
+    "id": "risk_taker",
+    "name": "Risk Taker",
+    "description": "Conquer 10 courage quests. Fear bows to you.",
+    "category": "COURAGE",
+    "requiredQuestCount": 10,
+    "requiredCategory": "COURAGE"
+  },
+  {
+    "id": "fearless_wanderer",
+    "name": "Fearless Wanderer",
+    "description": "Conquer 15 courage quests. Nothing holds you back.",
+    "category": "COURAGE",
+    "requiredQuestCount": 15,
+    "requiredCategory": "COURAGE"
+  },
+  {
+    "id": "pathfinder",
+    "name": "Pathfinder",
+    "description": "Conquer 20 courage quests. You forge your own way.",
+    "category": "COURAGE",
+    "requiredQuestCount": 20,
+    "requiredCategory": "COURAGE"
+  },
+  {
+    "id": "bold_explorer",
+    "name": "Bold Explorer",
+    "description": "Conquer 30 courage quests. The unknown is your playground.",
+    "category": "COURAGE",
+    "requiredQuestCount": 30,
+    "requiredCategory": "COURAGE"
+  },
+  {
+    "id": "adventure_seeker",
+    "name": "Adventure Seeker",
+    "description": "Conquer 5 adventure quests.",
+    "category": "ADVENTURE",
+    "requiredQuestCount": 5,
+    "requiredCategory": "ADVENTURE"
+  },
+  {
+    "id": "dawn_chaser",
+    "name": "Dawn Chaser",
+    "description": "Conquer 10 adventure quests. You chase the horizon.",
+    "category": "ADVENTURE",
+    "requiredQuestCount": 10,
+    "requiredCategory": "ADVENTURE"
+  }
+]
+
